@@ -34,20 +34,28 @@ Application = React.createClass
 
   render: ->
     todos = @state.todos
-    `<div>
-       <ul>
+    `<div className="panel panel-default">
+      <div className="panel-heading">
+        <h4>Fluxxor TODO</h4>
+     </div>
+       <ul className="list-group">
          { Object.keys(todos).map(function(id) {
-             return <li key={id}><TodoItem todo={todos[id]} /></li>;
+             return <li className="list-group-item" key={id}><TodoItem todo={todos[id]} /></li>;
            })
          }
        </ul>
-       <form onSubmit={this.onSubmitForm}>
-         <input type="text" size="30" placeholder="New Todo"
-                value={this.state.newTodoText}
-                onChange={this.handleTodoTextChange} />
-         <input type="submit" value="Add Todo" />
-       </form>
-       <button onClick={this.clearCompletedTodos}>Clear Completed</button>
+       <div className="panel-footer">
+         <form onSubmit={this.onSubmitForm} className="form-inline">
+           <div className="form-group">
+             <input type="text" size="30" className="form-control"
+                    placeholder="New Todo"
+                    value={this.state.newTodoText}
+                    onChange={this.handleTodoTextChange} />
+           </div>
+           <button type="submit" className="btn btn-primary" >Add Todo</button>
+           <button onClick={this.clearCompletedTodos} className="btn btn-defalut">Clear Completed</button>
+         </form>
+       </div>
      </div>`
 
   handleTodoTextChange: (e) ->

@@ -16,5 +16,6 @@
 //= require turbolinks
 //= require react
 //= require react_ujs
+//= require fluxxor
 //= require components
 //= require_tree .

@@ -1,0 +1,22 @@
+{
+  "name": "react-flux-on-rails-sample-02",
+  "version": "0.0.0",
+  "authors": [
+    "Teppei Tosa <teppei_tosa@hotmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fluxxor": "~1.7.3"
+  }
+}
